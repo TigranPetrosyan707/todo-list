@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #374151;
+}
+
+/* header section start */
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
+}
+
+#adding-task-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#adding-task-input {
+  flex: 1 1 0%;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  background-image: linear-gradient(to right, #8e9eab, #eef2f3);
+  font-size: 1.25rem;
+  color: #202020;
+  font-family: "Inconsolata", monospace;
+}
+
+#adding-task-input::placeholder {
+  color: #303030;
+}
+
+#adding-taks-submit {
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-family: "Inconsolata", monospace;
+  background-image: linear-gradient(to right, #606c88, #3f4c6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s;
+}
+
+#adding-taks-submit:hover {
+  opacity: 0.8;
+}
+
+/* header section end */
+
+/* main section start */
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+.task-list h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: "Inconsolata", monospace;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, #606c88, #3f4c6b);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+  font-size: 1.125rem;
+  color: #303030;
+  font-family: "Inconsolata", monospace;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+
+#tasks .task .content .text:not(:read-only) {
+  color: white;
+  font-weight: 400;
+}
+
+#tasks .task .action {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.task .action button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: 0.4s;
+}
+
+.task .action button:hover {
+  opacity: 0.8;
+}
+
+.task .action .edit {
+  color: limegreen;
+  font-family: "Inconsolata", monospace;
+}
+
+.task .action .delete {
+  color: red;
+  font-family: "Inconsolata", monospace;
+}
+
+/* main section end */
